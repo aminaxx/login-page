@@ -1,0 +1,192 @@
+body{
+  margin:0;
+  color:#524c40;
+  font:600 18px/20px Open Sans;
+  background:url(https://pp.userapi.com/c635107/v635107044/5f37/LS0AWG4Ynp4.jpg);
+  background-size: cover;
+}
+*,:after,:before{
+  box-sizing:border-box
+}
+.clearfix:after,.clearfix:before{
+  content:'';
+  display:table
+}
+.clearfix:after{
+  clear:both;
+  display:block}
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+.wrap{
+  width:100%;
+  margin:auto;
+  margin-top: 70px;
+  max-width:480px;
+  min-height:520px;
+  position:relative;
+  background: #d6d6b8;
+ }
+.login{
+  width:100%;
+  height:100%;
+  position:absolute;
+  padding:80px 70px 50px 70px;
+  background: #d6d6b8;
+}
+.login .sign-in-htm{
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  transform:rotateY(180deg);
+  backface-visibility:hidden;
+  transition:all .5s linear;
+}
+.login .sign-up-htm{
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  transform:rotateY(-180deg);
+  backface-visibility:hidden;
+  transition:all .5s linear;
+}
+
+.login .sign-in,
+.login .sign-up,
+.lform .group .check{
+display:none;
+}
+.login .tab,
+.lform .group .label,
+.lform .group .button{
+text-transform:uppercase;
+}
+
+.login .tab{
+    font-size:20px;
+    margin-right:16px;
+    padding-bottom:5px;
+    margin:0 15px 11px 0;
+    display:inline-block;
+    border-bottom:2px solid transparent;
+    }
+
+.login .sign-in:checked + .tab,
+.login .sign-up:checked + .tab{
+  color:#fff;
+  border-color:#524c40;
+}
+
+
+.lform{
+  min-height:345px;
+  position:relative;
+  perspective:1000px;
+  transform-style:preserve-3d;
+}
+.lform .group{
+  margin-bottom:18px; /*margin between labels*/
+}
+
+.lform .group .label,
+.lform .group .input,
+.lform .group .button{
+  width:100%;
+  color:#fff;
+  display:block;
+}
+
+.lform .group .input,
+.lform .group .button{
+  border:none;
+  padding:15px 20px;
+  border-radius:25px;
+  background:rgba(255,255,255,.1);
+}
+
+.lform .group input[data-type="password"]{
+  text-security:circle;
+  -webkit-text-security:square;
+}
+.lform .group .label{
+  color:#aaa;
+  font-size:10px;
+}
+ .lform .group .button{
+      background:#524c40;
+  }
+
+.lform .group label .icon{
+  width:15px;  /*square label near remb me*/
+  height:15px;
+  border-radius:3px;
+  position:relative;
+  display:inline-block;
+  background:rgba(255,255,255,.1);
+}
+
+.lform .group label .icon:before,
+.lform .group label .icon:after{
+  content:'';
+  width:10px;    /*point inside squeare*/
+  height:2px;
+  background:#fff;
+  position:absolute;
+  transition:all .2s ease-in-out 0s;
+}
+
+.lform .group label .icon:before{
+  left:3px;
+  width:5px;
+  bottom:6px;
+  transform:scale(0) rotate(0);
+}
+
+.lform .group label .icon:after{
+  top:7px;
+  right:0;
+  transform:scale(0) rotate(0);
+}
+
+.lform .group .check:checked + label{
+  color:#fff;
+}
+.lform .group .check:checked + label .icon{
+  background:#524c40;
+}
+.lform .group .check:checked + label .icon:before{
+  -webkit-transform:scale(1) rotate(45deg);
+          transform:scale(1) rotate(45deg);
+}
+.lform .group .check:checked + label .icon:after{
+  -webkit-transform:scale(1) rotate(-45deg);
+          transform:scale(1) rotate(-45deg);
+}
+.login .sign-in:checked + .tab + .sign-up + .tab + .lform .sign-in-htm{
+  -webkit-transform:rotate(0);
+          transform:rotate(0);
+}
+.login .sign-up:checked + .tab + .lform .sign-up-htm{
+  -webkit-transform:rotate(0);
+          transform:rotate(0);
+}
+.hr1{
+  height:1px;
+  margin:35px 0 35px 0;
+  background:rgba(255,255,255,.2);
+}
+.hr2{
+  height:1px;
+  margin: 15px 0 15px 0;
+  background:rgba(255,255,255,.2);
+}
+.foot{
+  width: 100%;
+  text-align:center;
+}
